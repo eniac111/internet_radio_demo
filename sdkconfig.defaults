@@ -10,7 +10,12 @@ CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
 #
 CONFIG_SPIRAM_SUPPORT=y
 CONFIG_SPIRAM_IGNORE_NOTFOUND=y
+
+#
+# FreeRTOS config
+#
 CONFIG_FREERTOS_HZ=1000
+CONFIG_FREERTOS_ENABLE_BACKWARD_COMPATIBILITY=y
 
 
 # Increase default app partition size to accommodate internet radio example
