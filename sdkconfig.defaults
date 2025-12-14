@@ -10,13 +10,18 @@ CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
 #
 CONFIG_SPIRAM_SUPPORT=y
 CONFIG_SPIRAM_IGNORE_NOTFOUND=y
+
+#
+# FreeRTOS config
+#
 CONFIG_FREERTOS_HZ=1000
+CONFIG_FREERTOS_ENABLE_BACKWARD_COMPATIBILITY=y
 
 
-# Increase default app partition size to accommodate living example
-# by providing new partition table in "partitions_living_example.csv"
+# Increase default app partition size to accommodate internet radio example
+# by providing new partition table in "partitions_internet_radio.csv"
 CONFIG_PARTITION_TABLE_CUSTOM=y
-CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions_living_example.csv"
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions_internet_radio.csv"
 CONFIG_PARTITION_TABLE_CUSTOM_APP_BIN_OFFSET=0x10000
-CONFIG_PARTITION_TABLE_FILENAME="partitions_living_example.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions_internet_radio.csv"
 CONFIG_APP_OFFSET=0x10000

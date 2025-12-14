@@ -31,6 +31,8 @@
 
 # Build tree
 /build-*
+/build/
+/sdkconfig.old
 
 #
 # Top-level generic files

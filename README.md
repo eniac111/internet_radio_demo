@@ -9,11 +9,9 @@ https://www.olimex.com/Products/IoT/ESP32/ESP32-ADF/open-source-hardware
 
 ## Usage
 
-Prepare the audio board:
+### Prerequisites
 
-- Connect speakers or headphones to the board.
-
-# Get ESP-ADF
+Get ESP-ADF:
 ```bash
 cd ~/
 git clone --recursive https://github.com/espressif/esp-adf.git
@@ -22,22 +20,55 @@ git submodule update --init
 export ADF_PATH=~/esp-adf
 ```
 
+Set up ESP-IDF (required by ESP-ADF):
+```bash
+cd $ADF_PATH/esp-idf
+./install.sh
+. ./export.sh
+```
+
+### Build and Flash (CMake - Recommended)
+
 Load the example:
+```bash
+git clone https://github.com/d3v1c3nv11/internet_radio_demo.git
+cd internet_radio_demo
+```
+
+Configure the example:
+```bash
+idf.py menuconfig
+```
+- In the menuconfig interface, navigate to `Example Configuration` and fill in `WiFi SSID` and `WiFi Password`.
+
+Build, flash and monitor:
+```bash
+idf.py build
+idf.py flash monitor
+```
+
+### Build and Flash (Legacy Make)
+
+Load and configure the example:
 ```bash
 git clone https://github.com/d3v1c3nv11/internet_radio_demo.git
 cd internet_radio_demo
 make menuconfig
 ```
-Configure the example:
-
-- Set up the Wi-Fi connection by running `menuconfig` > `Example Configuration` and filling in `WiFi SSID` and `WiFi Password`.
+- In the menuconfig interface, navigate to `Example Configuration` and fill in `WiFi SSID` and `WiFi Password`.
 
 Run the example:
 
 ```bash
 make flash monitor
 ```
-- The audio board will first connect to the Wi-Fi.
+
+### Operation
+
+Prepare the audio board:
+- Connect speakers or headphones to the board.
+
+The audio board will first connect to the Wi-Fi.
 - Then the board will start playing automatically.
 ```bash
 Use Touch buttons:
