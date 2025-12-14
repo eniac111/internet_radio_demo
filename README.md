@@ -39,7 +39,7 @@ Configure the example:
 ```bash
 idf.py menuconfig
 ```
-- Set up the Wi-Fi connection by running `menuconfig` > `Example Configuration` and filling in `WiFi SSID` and `WiFi Password`.
+- In the menuconfig interface, navigate to `Example Configuration` and fill in `WiFi SSID` and `WiFi Password`.
 
 Build, flash and monitor:
 ```bash
@@ -49,15 +49,13 @@ idf.py flash monitor
 
 ### Build and Flash (Legacy Make)
 
-Load the example:
+Load and configure the example:
 ```bash
 git clone https://github.com/d3v1c3nv11/internet_radio_demo.git
 cd internet_radio_demo
 make menuconfig
 ```
-Configure the example:
-
-- Set up the Wi-Fi connection by running `menuconfig` > `Example Configuration` and filling in `WiFi SSID` and `WiFi Password`.
+- In the menuconfig interface, navigate to `Example Configuration` and fill in `WiFi SSID` and `WiFi Password`.
 
 Run the example:
 
