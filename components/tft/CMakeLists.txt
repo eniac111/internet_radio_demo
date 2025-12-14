@@ -1,0 +1,13 @@
+idf_component_register(SRCS "tft.c"
+                            "tftspi.c"
+                            "DefaultFont.c"
+                            "DejaVuSans18.c"
+                            "DejaVuSans24.c"
+                            "SmallFont.c"
+                            "Ubuntu16.c"
+                            "comic24.c"
+                            "def_small.c"
+                            "minya24.c"
+                            "tooney32.c"
+                    INCLUDE_DIRS "."
+                    REQUIRES spidriver)
